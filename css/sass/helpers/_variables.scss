@@ -1,0 +1,25 @@
+
+$colorDark: #212529;
+$colorLight: #E6E7E9;
+$colorGrey: #6c757d;
+
+$fontFamilyPrimary: 'Inter', sans-serif;
+$fontFamilySecondary: 'Montserrat', sans-serif;
+
+$fontLarge: clamp(3rem, 2.2500rem + 3.3333vw, 6rem);
+$fontMedium: clamp(1.6rem, 1.2500rem + 1.5556vw, 3rem);
+$fontSmall: clamp(1rem, 0.7500rem + 1.1111vw, 2rem);
+$fontTiny: clamp(1rem, 0.8500rem + 0.6667vw, 1.6rem);
+
+$fontWeightBold: 700;
+$fontWeightNormal: 400;
+$fontWeightThin: 200;
+
+$logoHeaderSize: clamp(3.5rem, 3.1250rem + 1.6667vw, 5rem);
+$toggleSize: clamp(2rem, 1.7500rem + 1.1111vw, 3rem);
+$toggleDotsSize: clamp(0.55rem, 0.4625rem + 0.3889vw, 0.9rem);
+$logoNavSize: clamp(7.5rem, 5.6250rem + 8.3333vw, 15rem);
+
+
+
+$mainTransition: all 0.3s;

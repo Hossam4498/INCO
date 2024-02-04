@@ -1,0 +1,114 @@
+/* ====================================================================== */
+/* =========================== Contact Section ========================== */
+/* ====================================================================== */
+
+.contact {
+    min-height: 100vh;
+    padding-bottom: 100px;
+
+    .section-heading h2 {
+        @include SectionTitle;
+    }
+
+    .contact-form {
+        margin: 50px 0;
+
+        .subject,
+        .telephone {
+            width: 100%;
+        }
+
+        input[type='text'], 
+        input[type='email'], 
+        select, 
+        textarea {
+            background: none;
+            border: none;
+            border-bottom: solid 2px $colorDark;
+            color: $colorDark;
+            font-family: $fontFamilySecondary;
+            font-size: $fontTiny;
+            letter-spacing: 1px;
+            margin: 30px 0;
+            padding: 1rem;
+            width: 100%;
+            transition: $mainTransition;
+        }
+
+        input[type='text']:focus, 
+        input[type='email']:focus, 
+        textarea:focus {
+            outline: none;
+            padding: 0 0 1rem 0;
+        }
+
+        select {
+            border-radius: none;
+            outline: none;
+            appearance: none;
+            color: $colorGrey;
+            font-family: $fontFamilySecondary;
+            // padding: 20px;
+
+            option {
+                background-color: $colorLight;
+                color: $colorDark;
+            }
+        }
+        
+        textarea {
+            line-height: 150%;
+            height: 150px;
+            resize: none;
+            width: 100%;
+        }
+
+        .checkbox {
+            margin-bottom: 5rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            input {
+                width: 1.5rem;
+                height: 1.5rem;
+                accent-color: $colorDark;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+
+            label {
+                color: $colorGrey;
+
+                a {
+                    color: $colorDark;
+                }
+            }
+        }
+
+
+        .submit {
+            .form-button {
+                font-family: $fontFamilySecondary;
+                font-size: $fontSmall;
+                font-weight: $fontWeightBold;
+                background-color: $colorLight;
+                border: solid 2px $colorDark;
+                color: $colorDark;
+                cursor: pointer;
+                display: inline-block;
+                padding: 20px 35px;
+                transition: $mainTransition;
+
+                &:hover {
+                    background: $colorDark;
+                    color: $colorLight;
+                }
+
+                @media screen and (max-width: 480px) {
+                    padding: 15px 25px;
+                }
+            }
+        }
+    }
+}

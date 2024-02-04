@@ -1,0 +1,114 @@
+/* ====================================================================== */
+/* =========================== Footer Section =========================== */
+/* ====================================================================== */
+
+.footer {
+    background: $colorDark;
+    padding-top: 3rem;
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        border-bottom: 1px solid $colorGrey;
+        padding-bottom: 3rem;
+
+        .img-box {
+            .logo-footer {
+                margin-top: 2rem;
+            }
+
+            .footer-about p {
+                color: $colorGrey;
+                font-style: italic;
+                font-size: $fontTiny;
+                max-width: 350px;
+            }
+        }
+
+        .social-links h2, 
+        .useful-link h2, 
+        .address h2 {
+            font-family: $fontFamilyPrimary;
+            font-size: $fontMedium;
+            font-weight: $fontWeightNormal;
+            color: $colorGrey;
+            letter-spacing: 1px;
+        }
+
+        .social-icons, 
+        .use-links, 
+        .address-box {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .social-icons a, 
+        .use-links a, 
+        .address a {
+            font-family: $fontFamilySecondary;
+            font-size: $fontTiny;
+            font-weight: $fontWeightThin;
+            color: $colorLight;
+            transition: $mainTransition;
+        }
+
+        .social-icons a:hover, .use-links a:hover, .address a:hover {
+            color: $colorGrey;
+        }
+
+        .social-icons a i, 
+        .use-links a i {
+            font-size: $fontTiny;
+            color: $colorGrey;
+            margin-right: 12px;
+            width: 20px;
+        }
+
+        .address {
+            i {
+                color: $colorGrey;
+                font-size: $fontTiny;
+                margin-right: 12px;
+            }
+
+            span {
+                font-family: $fontFamilySecondary;
+                font-size: $fontTiny;
+                font-weight: $fontWeightThin;
+                color: $colorLight;
+                margin-left: 3px;
+
+                i {
+                    color: $colorGrey;
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        font-family: $fontFamilySecondary;
+        font-size: $fontTiny;
+        background: $colorDark;
+        color: $colorGrey;
+        padding: 1.8rem;
+        text-align: center;
+
+        a {
+            font-family: $fontFamilyPrimary;
+            font-weight: $fontWeightBold;
+            background-color: $colorLight;
+            color: $colorDark;
+            padding: 2px 10px;
+            border-radius: 5px;
+            letter-spacing: 1px;
+            transition: $mainTransition;
+
+            &:hover {
+                background-color: $colorGrey;
+            }
+        }
+    }
+}

@@ -1,0 +1,98 @@
+/* ====================================================================== */
+/* ============================ about Section =========================== */
+/* ====================================================================== */
+
+.about {
+    min-height: 100vh;
+    padding-bottom: 100px;
+
+    .section-heading h2 {
+        @include SectionTitle;
+    }
+
+    .boxes {
+        .reverse {
+            flex-direction: row-reverse;
+        }
+
+        .hidden {
+            opacity: 0;
+            filter: blur(5px);
+            transform: translateX(-100%);
+            transition: all 1s;
+        }
+        
+        .show {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateX(0);
+        }
+
+        .box {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 100px;
+            margin-top: 50px;
+
+            @media (max-width: 1200px) {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .content {
+                width: 35%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+                @media (max-width: 1300px) {
+                    width: 100%;
+                }
+
+                p {
+                    font-family: $fontFamilySecondary;
+                    font-size: $fontTiny;
+                    color: $colorDark;
+                    line-height: 1.6;
+
+                    @media (max-width: 1200px) {
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .span {
+                    font-family: $fontFamilyPrimary;
+                    color: $colorGrey;
+                    font-size: $fontMedium;
+                    font-weight: $fontWeightBold;
+                    margin: 0;
+                }
+            }
+
+            .image {
+                width: 60%;
+
+                @media (max-width: 1300px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.hidden {
+    opacity: 0;
+    transition: $mainTransition;
+}
+
+.show {
+    opacity: 1;
+}
+
+
+@keyframes animated-gradient{
+    to {
+        background-position: 200%;
+    }
+}

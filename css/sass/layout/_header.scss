@@ -1,0 +1,171 @@
+/* ====================================================================== */
+/* =========================== Header Section =========================== */
+/* ====================================================================== */
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header__logo {
+        width: $logoHeaderSize;
+        cursor: pointer;
+        margin-top: 2rem;
+    }
+
+    .header__toggle {
+        width: $toggleSize;
+        height: $toggleSize;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+        cursor: pointer;
+        margin-top: 2rem;
+
+        > {
+            div {
+                width: $toggleDotsSize;
+                height: $toggleDotsSize;
+                border-radius: 50%;
+                animation: fade 1.5s alternate ease-in-out infinite;
+                background-color: $colorDark;
+            }
+
+            div {
+                &:nth-of-type(2), &:nth-of-type(4) {
+                    animation-delay: 0.25s;
+                }
+        
+                &:nth-of-type(3), &:nth-of-type(5), &:nth-of-type(7) {
+                    animation-delay: 0.5s;
+                }
+        
+                &:nth-of-type(6), &:nth-of-type(8) {
+                    animation-delay: 0.75s;
+                }
+        
+                &:nth-of-type(9) {
+                    animation-delay: 1s;
+                }
+            }
+        }
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        // background-color: $colorDark;
+
+        background: rgba(33, 37, 41, 0.8);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        color: $colorLight;
+
+        width: 100%;
+        height: 100vh;
+        padding-top: 1.5rem;
+        z-index: 100;
+        transition: $mainTransition;
+
+        &.show {
+            left: 0;
+        }
+
+        .nav__content {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            
+
+            .header__close {
+                cursor: pointer;
+                width: $toggleSize;
+                height: $toggleSize;
+                display: grid;
+                grid-template-rows: repeat(3, 1fr);
+                grid-template-columns: repeat(3, 1fr);
+                justify-items: center;
+                align-items: center;
+                cursor: pointer;
+                margin-top: 1rem;
+                z-index: 10;
+        
+                > {
+                    div {
+                        width: $toggleDotsSize;
+                        height: $toggleDotsSize;
+                        border-radius: 50%;
+                        animation: fade 1.5s alternate ease-in-out infinite;
+                        background-color: $colorLight;
+                    }
+        
+                    div {
+                        &:nth-of-type(2), &:nth-of-type(4) {
+                            animation-delay: 0.25s;
+                        }
+                
+                        &:nth-of-type(3), &:nth-of-type(5), &:nth-of-type(7) {
+                            animation-delay: 0.5s;
+                        }
+                
+                        &:nth-of-type(6), &:nth-of-type(8) {
+                            animation-delay: 0.75s;
+                        }
+                
+                        &:nth-of-type(9) {
+                            animation-delay: 1s;
+                        }
+                    }
+                }
+            }
+
+            .nav__menu__container {
+                .nav__img {
+                    img {
+                        width: $logoNavSize;
+                        margin-top: 1rem;
+                        cursor: pointer;
+                    }
+                }
+    
+                .nav__menu {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+    
+                    .nav__list .nav__item {
+                        margin: 5rem 0;
+    
+                        .active {
+                            color: $colorLight;
+                        }
+    
+                        .nav__link {
+                            font-family: $fontFamilyPrimary;
+                            font-size: $fontMedium;
+                            font-weight: $fontWeightThin;
+                            color: $colorLight;
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes fade {
+    to {
+        opacity: 0.2;
+    }
+}

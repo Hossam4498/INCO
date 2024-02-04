@@ -1,0 +1,62 @@
+
+@mixin centering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin overlay($color, $opacity) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var($color, $opacity);
+}
+
+@mixin mediumMedia {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin prefixer($property, $value, $prefixes: ()) {
+    @each $prefix in $prefixes {
+        #{"-" + $prefix + "-" + $property}: $value;
+    }
+    #{$property}: $value;
+}
+// @include prefixer(box-shadow, 10px 10px 10px #fff, webkit moz o ms);
+
+
+@mixin keyFrame($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+// @include keyFrame(fadeInOut) {
+//     0% {
+//         opacity: 0.5;
+//     }
+//     50% {
+//         opacity: 1;
+//     }
+//     100% {
+//         opacity: 0.5;
+//     }
+// }
+
+
+@mixin SectionTitle {
+    font-family: $fontFamilyPrimary;
+    font-size: $fontLarge;
+    color: $colorDark;
+    margin: 0;
+    padding-top: 100px;
+}
