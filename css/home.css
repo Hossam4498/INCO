@@ -216,11 +216,7 @@ img {
 .home .container .content .line {
   height: 3px;
   width: 100%;
-  background: rgba(33, 37, 41, 0.7);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  margin-bottom: 10px;
+  background-color: #212529;
 }
 .home .container .content .title {
   font-family: "Inter", sans-serif;
