@@ -17,14 +17,12 @@
 
         .hidden {
             opacity: 0;
-            filter: blur(5px);
             transform: translateX(-100%);
-            transition: all 1s;
+            transition: $mainTransition;
         }
         
         .show {
             opacity: 1;
-            filter: blur(0);
             transform: translateX(0);
         }
 
@@ -52,7 +50,7 @@
 
                 p {
                     font-family: $fontFamilySecondary;
-                    font-size: $fontTiny;
+                    font-size: $fontSmall;
                     color: $colorDark;
                     line-height: 1.6;
 

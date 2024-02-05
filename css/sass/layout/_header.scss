@@ -15,6 +15,9 @@
     .header__logo {
         width: $logoHeaderSize;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-top: 2rem;
     }
 
@@ -144,9 +147,14 @@
     
                     .nav__list .nav__item {
                         margin: 5rem 0;
+                        transition: $mainTransition;
     
-                        .active {
-                            color: $colorLight;
+                        :link.active, 
+                        :visited.active, 
+                        :active.active {
+                            border-bottom: 3px solid $colorGrey;
+                            color: $colorGrey;
+                            padding: 15px;
                         }
     
                         .nav__link {

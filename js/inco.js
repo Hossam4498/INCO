@@ -1,7 +1,8 @@
-
 const navMenu = document.querySelector(".nav");
 const toggleMenu = document.querySelector(".header__toggle");
 const closeMenu = document.querySelector(".header__close");
+const navLinks = document.querySelectorAll(".nav__list a");
+const activePage = window.location.pathname;
 
 
 // Show.
@@ -14,21 +15,12 @@ closeMenu.addEventListener("click", () => {
     navMenu.classList.remove("show");
 })
 
-/*===== ACTIVE AND REMOVE MENU =====*/
-const navLink = document.querySelectorAll('.nav__link');   
 
-function linkAction(){
-    /*Active link*/
-    navLink.forEach(n => n.classList.remove('active'));
-    this.classList.add('active');
-    
-    /*Remove menu mobile*/
-    navMenu.classList.remove('show')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction));
-
-
-
+navLinks.forEach(link => {
+    if(link.href.includes(`${activePage}`)) {
+        link.classList.add("active");
+    };
+});
 
 
 const observer = new IntersectionObserver((entries) => {
@@ -45,3 +37,5 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((element) => observer.observe(element));
+
+

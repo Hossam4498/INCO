@@ -4,8 +4,8 @@
     
     .section-heading h2 {
         @include SectionTitle;
+        padding-left: 0;
     }
-    
 
     .boxes {
         margin-top: 100px;

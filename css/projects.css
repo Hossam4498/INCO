@@ -64,6 +64,9 @@ img {
 .header .header__logo {
   width: clamp(3.5rem, 3.125rem + 1.6667vw, 5rem);
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 2rem;
 }
 .header .header__toggle {
@@ -164,13 +167,18 @@ img {
 }
 .header .nav .nav__content .nav__menu__container .nav__menu .nav__list .nav__item {
   margin: 5rem 0;
+  transition: all 0.3s;
 }
-.header .nav .nav__content .nav__menu__container .nav__menu .nav__list .nav__item .active {
-  color: #E6E7E9;
+.header .nav .nav__content .nav__menu__container .nav__menu .nav__list .nav__item :link.active,
+.header .nav .nav__content .nav__menu__container .nav__menu .nav__list .nav__item :visited.active,
+.header .nav .nav__content .nav__menu__container .nav__menu .nav__list .nav__item :active.active {
+  border-bottom: 3px solid #6c757d;
+  color: #6c757d;
+  padding: 15px;
 }
 .header .nav .nav__content .nav__menu__container .nav__menu .nav__list .nav__item .nav__link {
   font-family: "Inter", sans-serif;
-  font-size: clamp(1.6rem, 1.25rem + 1.5556vw, 3rem);
+  font-size: clamp(1.2rem, 0.6rem + 2.6667vw, 2rem);
   font-weight: 200;
   color: #E6E7E9;
   letter-spacing: 1px;
@@ -226,12 +234,12 @@ img {
 .projects .projects-box .project .content h3 {
   padding: 0 30px;
   color: #E6E7E9;
-  font-size: clamp(1.6rem, 1.25rem + 1.5556vw, 3rem);
+  font-size: clamp(1.2rem, 0.6rem + 2.6667vw, 2rem);
   margin: 20px auto;
 }
 .projects .projects-box .project .content h4 {
   color: #E6E7E9;
-  font-size: clamp(1rem, 0.75rem + 1.1111vw, 2rem);
+  font-size: clamp(0.9rem, 0.675rem + 1vw, 1.2rem);
   font-weight: 200;
   margin: 20px auto;
   padding: 0 30px;
@@ -262,17 +270,16 @@ img {
 .footer .grid .img-box .footer-about p {
   color: #6c757d;
   font-style: italic;
-  font-size: clamp(1rem, 0.85rem + 0.6667vw, 1.6rem);
+  font-size: clamp(0.9rem, 0.675rem + 1vw, 1.2rem);
   max-width: 350px;
 }
 .footer .grid .social-links h2,
 .footer .grid .useful-link h2,
 .footer .grid .address h2 {
   font-family: "Inter", sans-serif;
-  font-size: clamp(1.6rem, 1.25rem + 1.5556vw, 3rem);
-  font-weight: 400;
+  font-size: clamp(1.2rem, 0.6rem + 2.6667vw, 2rem);
+  font-weight: 700;
   color: #6c757d;
-  letter-spacing: 1px;
 }
 .footer .grid .social-icons,
 .footer .grid .use-links,
@@ -285,7 +292,7 @@ img {
 .footer .grid .use-links a,
 .footer .grid .address a {
   font-family: "Montserrat", sans-serif;
-  font-size: clamp(1rem, 0.85rem + 0.6667vw, 1.6rem);
+  font-size: clamp(0.9rem, 0.675rem + 1vw, 1.2rem);
   font-weight: 200;
   color: #E6E7E9;
   transition: all 0.3s;
@@ -295,19 +302,19 @@ img {
 }
 .footer .grid .social-icons a i,
 .footer .grid .use-links a i {
-  font-size: clamp(1rem, 0.85rem + 0.6667vw, 1.6rem);
+  font-size: clamp(0.9rem, 0.675rem + 1vw, 1.2rem);
   color: #6c757d;
   margin-right: 12px;
   width: 20px;
 }
 .footer .grid .address i {
   color: #6c757d;
-  font-size: clamp(1rem, 0.85rem + 0.6667vw, 1.6rem);
+  font-size: clamp(0.9rem, 0.675rem + 1vw, 1.2rem);
   margin-right: 12px;
 }
 .footer .grid .address span {
   font-family: "Montserrat", sans-serif;
-  font-size: clamp(1rem, 0.85rem + 0.6667vw, 1.6rem);
+  font-size: clamp(0.9rem, 0.675rem + 1vw, 1.2rem);
   font-weight: 200;
   color: #E6E7E9;
   margin-left: 3px;
@@ -318,7 +325,7 @@ img {
 }
 .footer .copyright {
   font-family: "Montserrat", sans-serif;
-  font-size: clamp(1rem, 0.85rem + 0.6667vw, 1.6rem);
+  font-size: clamp(0.9rem, 0.675rem + 1vw, 1.2rem);
   background: #212529;
   color: #6c757d;
   padding: 1.8rem;
@@ -327,13 +334,11 @@ img {
 .footer .copyright a {
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  background-color: #E6E7E9;
-  color: #212529;
-  padding: 2px 10px;
-  border-radius: 5px;
+  color: #E6E7E9;
   letter-spacing: 1px;
   transition: all 0.3s;
 }
 .footer .copyright a:hover {
-  background-color: #6c757d;
+  border-bottom: 1px solid #E6E7E9;
+  margin-left: 10px;
 }/*# sourceMappingURL=projects.css.map */

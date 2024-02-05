@@ -64,6 +64,9 @@ img {
 .header .header__logo {
   width: clamp(3.5rem, 3.125rem + 1.6667vw, 5rem);
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 2rem;
 }
 .header .header__toggle {
@@ -164,13 +167,18 @@ img {
 }
 .header .nav .nav__content .nav__menu__container .nav__menu .nav__list .nav__item {
   margin: 5rem 0;
+  transition: all 0.3s;
 }
-.header .nav .nav__content .nav__menu__container .nav__menu .nav__list .nav__item .active {
-  color: #E6E7E9;
+.header .nav .nav__content .nav__menu__container .nav__menu .nav__list .nav__item :link.active,
+.header .nav .nav__content .nav__menu__container .nav__menu .nav__list .nav__item :visited.active,
+.header .nav .nav__content .nav__menu__container .nav__menu .nav__list .nav__item :active.active {
+  border-bottom: 3px solid #6c757d;
+  color: #6c757d;
+  padding: 15px;
 }
 .header .nav .nav__content .nav__menu__container .nav__menu .nav__list .nav__item .nav__link {
   font-family: "Inter", sans-serif;
-  font-size: clamp(1.6rem, 1.25rem + 1.5556vw, 3rem);
+  font-size: clamp(1.2rem, 0.6rem + 2.6667vw, 2rem);
   font-weight: 200;
   color: #E6E7E9;
   letter-spacing: 1px;
@@ -228,7 +236,7 @@ img {
 }
 .home .container .content .subtitle {
   font-family: "Inter", sans-serif;
-  font-size: clamp(1rem, 0.75rem + 1.1111vw, 2rem);
+  font-size: clamp(0.9rem, 0.675rem + 1vw, 1.2rem);
   margin: 0 0 20px 0;
   color: #E6E7E9;
 }
